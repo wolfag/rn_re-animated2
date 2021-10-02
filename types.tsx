@@ -26,6 +26,7 @@ export type RootStackParamList = {
   DoubleTapHeartScreen: undefined;
   SwipeToDeleteScreen: undefined;
   CircularProgressScreen: undefined;
+  IntroScreen: undefined;
   Modal: undefined;
   NotFound: undefined;
 };

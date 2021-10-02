@@ -21,7 +21,6 @@ const InterpolateScrollScreen = (
 
   const scrollHandler = useAnimatedScrollHandler((event) => {
     translateX.value = event.contentOffset.x;
-    console.log({ x: event.contentOffset.x });
   });
 
   return (

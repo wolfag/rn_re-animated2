@@ -20,6 +20,7 @@ import CircularProgressScreen from '../screens/CircularProgressScreen';
 import DoubleTapHeartScreen from '../screens/DoubleTapHeartScreen';
 import InterpolateColorScreen from '../screens/InterpolateColorScreen';
 import InterpolateScrollScreen from '../screens/InterpolateScrollScreen';
+import IntroScreen from '../screens/IntroScreen';
 import ModalScreen from '../screens/ModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
 import PanGestureHandlerScreen from '../screens/PanGestureHandlerScreen';
@@ -92,6 +93,7 @@ function RootNavigator() {
         name='CircularProgressScreen'
         component={CircularProgressScreen}
       />
+      <Stack.Screen name='IntroScreen' component={IntroScreen} />
       <Stack.Screen
         name='NotFound'
         component={NotFoundScreen}
