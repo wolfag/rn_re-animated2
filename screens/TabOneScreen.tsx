@@ -1,16 +1,70 @@
 import * as React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, TouchableOpacity } from 'react-native';
 
-import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 
-export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
+export default function TabOneScreen({
+  navigation,
+}: RootTabScreenProps<'TabOne'>) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="/screens/TabOneScreen.tsx" />
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate('BasicBall');
+        }}
+      >
+        <Text>Basic ball</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate('PanGestureHandler');
+        }}
+      >
+        <Text>PanGestureHandlerScreen</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate('InterpolateScrollScreen');
+        }}
+      >
+        <Text>InterpolateScrollScreen</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate('PinchGestureHandlerScreen');
+        }}
+      >
+        <Text>PinchGestureHandlerScreen</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate('InterpolateColorScreen');
+        }}
+      >
+        <Text>InterpolateColorScreen</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate('DoubleTapHeartScreen');
+        }}
+      >
+        <Text>DoubleTapHeartScreen</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate('SwipeToDeleteScreen');
+        }}
+      >
+        <Text>SwipeToDeleteScreen</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate('CircularProgressScreen');
+        }}
+      >
+        <Text>CircularProgressScreen</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -20,14 +74,5 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
   },
 });
